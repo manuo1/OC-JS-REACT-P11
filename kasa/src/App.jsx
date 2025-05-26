@@ -1,23 +1,15 @@
-import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 
 function App() {
-  const [logements, setLogements] = useState([]);
-
-  useEffect(() => {
-    fetch("/logements.json")
-      .then((res) => res.json())
-      .then((data) => setLogements(data));
-  }, []);
-
   return (
-    <div>
-      <h1>Bienvenue sur Kasa</h1>
-      <ul>
-        {logements.map((item) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
