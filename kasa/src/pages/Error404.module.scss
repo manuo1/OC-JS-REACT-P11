@@ -1,0 +1,32 @@
+@use "../styles/variables" as vars;
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: clamp(96px, 28.3944px + 18.0282vw, 288px);
+  font-weight: 700;
+  color: vars.$color-primary;
+  margin-top: clamp(50px, 70.2817px + -1.4085vw, 65px);
+}
+
+.message {
+  font-size: clamp(18px, 11.662px + 1.6901vw, 36px);
+  font-weight: 500;
+  color: vars.$color-primary;
+  margin-top: 100px;
+}
+
+.link {
+  font-size: clamp(14px, 12.5915px + 0.3756vw, 18px);
+  color: vars.$color-black;
+  margin-top: clamp(125px, 117.9577px + 1.8779vw, 145px);
+  margin-bottom: clamp(82px, 72.1408px + 2.6291vw, 110px);
+}
