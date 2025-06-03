@@ -7,9 +7,6 @@
   justify-content: space-between;
   align-items: center;
 
-  padding-top: 35px;
-  padding-bottom: 50px;
-
   width: clamp(335px, 86.11vw, 1240px);
   margin: 0 auto;
 }
@@ -21,17 +18,13 @@
 
 .nav {
   display: flex;
-  gap: 65px;
-
-  @media (max-width: 768px) {
-    gap: 26px;
-  }
+  gap: clamp(26px, 12.2676px + 3.662vw, 65px);
 
   a {
     text-decoration: none;
     color: vars.$color-black;
 
-    font-size: clamp(12px, 1.67vw, 24px);
+    font-size: clamp(12px, 7.7746px + 1.1268vw, 24px);
     font-weight: 500;
 
     &:hover {

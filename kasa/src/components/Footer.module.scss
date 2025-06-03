@@ -6,11 +6,16 @@
   align-items: center;
   text-align: center;
 
-  padding: 65px 0 5px;
-  gap: 20px;
+  padding: 65px 0 30px;
+  gap: clamp(14px, 3.0845px + 2.9108vw, 45px);
+  padding-bottom: clamp(30px, 19.4366px + 2.8169vw, 60px);
 
   background-color: vars.$color-black;
   color: vars.$color-white;
+
+  @media (max-width: 900px) {
+    padding-bottom: 60px;
+  }
 }
 
 .logo {

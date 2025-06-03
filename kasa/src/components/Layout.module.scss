@@ -1,0 +1,23 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1440px;
+  min-width: 375px;
+}
+
+.header {
+  margin-top: clamp(20px, 3.125vw, 45px);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: clamp(2px, -13.1408px + 4.0376vw, 45px);
+  margin-top: clamp(23px, 15.2535px + 2.0657vw, 45px);
+}
+
+.footer {
+  margin-top: 50px;
+}

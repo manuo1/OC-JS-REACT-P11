@@ -1,0 +1,50 @@
+@use "../styles/variables" as vars;
+
+.collapse {
+  overflow: hidden;
+  border-radius: 10px 10px 5px 5px;
+  background-color: vars.$color-grey-light;
+  width: clamp(335px, 86.11vw, 1240px);
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.header {
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: vars.$color-primary;
+  color: vars.$color-white;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+.content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.expanded {
+  padding: 15px 20px;
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+}

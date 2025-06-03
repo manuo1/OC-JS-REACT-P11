@@ -5,7 +5,7 @@ import bannerImage from '../assets/home-banner.png';
 function Home() {
   return (
     <>
-      <Banner image={bannerImage} text="Chez vous, partout et ailleurs" />
+      <Banner image={bannerImage} textLines={['Chez vous,\u00A0', 'partout et ailleurs']} />
       <CardGrid />
     </>
   );

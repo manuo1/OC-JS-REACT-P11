@@ -1,15 +1,20 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import styles from './Layout.module.scss';
 
 export default function Layout() {
   return (
-    <>
-      <Header />
-      <main>
+    <div className={styles.layout}>
+      <header className={styles.header}>
+        <Header />
+      </header>
+      <main className={styles.main}>
         <Outlet />
       </main>
-      <Footer />
-    </>
+      <footer className={styles.footer}>
+        <Footer />
+      </footer>
+    </div>
   );
 }
