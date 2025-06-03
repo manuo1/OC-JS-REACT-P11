@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(19px, 12.3099px + 1.784vw, 38px);
+  margin-top: clamp(15px, 10.4225px + 1.2207vw, 28px);
+  margin-bottom: clamp(0px, -6.338px + 1.6901vw, 18px);
+}
+
+.collapses {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0px, -3.5211px + 0.939vw, 10px);
+}

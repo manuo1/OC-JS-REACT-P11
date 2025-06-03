@@ -19,13 +19,15 @@ function Collapse({ title, content }) {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className={`${styles.icon} ${isOpen ? styles.iconOpen : ""}`}
+          className={`${styles.icon} ${isOpen ? styles.iconRotated : ""}`}
         >
           <path d="m6 9 6 6 6-6" />
         </svg>
       </div>
-      <div className={`${styles.content} ${isOpen ? styles.expanded : ""}`}>
-        {content}
+      <div className={`${styles.content} ${isOpen ? styles.expandedContent : ""}`}>
+        <div className={styles.contentInner}>
+          {content}
+        </div>
       </div>
     </div>
   );

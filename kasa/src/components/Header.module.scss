@@ -9,6 +9,7 @@
 
   width: clamp(335px, 86.11vw, 1240px);
   margin: 0 auto;
+  margin-top: clamp(20px, 3.125vw, 45px);
 }
 
 .logo {
@@ -24,7 +25,7 @@
     text-decoration: none;
     color: vars.$color-black;
 
-    font-size: clamp(12px, 7.7746px + 1.1268vw, 24px);
+    font-size: clamp(15px, 11.831px + 0.8451vw, 24px);
     font-weight: 500;
 
     &:hover {

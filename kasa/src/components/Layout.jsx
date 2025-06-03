@@ -6,15 +6,11 @@ import styles from './Layout.module.scss';
 export default function Layout() {
   return (
     <div className={styles.layout}>
-      <header className={styles.header}>
-        <Header />
-      </header>
-      <main className={styles.main}>
+      <Header />
+      <main>
         <Outlet />
       </main>
-      <footer className={styles.footer}>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }

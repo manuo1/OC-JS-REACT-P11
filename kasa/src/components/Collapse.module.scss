@@ -2,49 +2,54 @@
 
 .collapse {
   overflow: hidden;
-  border-radius: 10px 10px 5px 5px;
+  border-radius: 5px;
   background-color: vars.$color-grey-light;
-  width: clamp(335px, 86.11vw, 1240px);
+  width: clamp(335px, 92.7465px + 64.6009vw, 1023px);
   margin: 0 auto;
   margin-bottom: 20px;
 }
 
 .header {
-  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+
+  border-radius: 5px;
+  padding: 0 15px;
+
   font-weight: bold;
-  font-size: 18px;
+  font-size: clamp(8px, 5.1831px + 0.7512vw, 16px);
   background-color: vars.$color-primary;
   color: vars.$color-white;
   cursor: pointer;
   border: none;
+
+  height: clamp(30px, 22.2535px + 2.0657vw, 52px);
   width: 100%;
 }
 
 .icon {
+  width: 44px;
+  height: 44px;
   transition: transform 0.3s ease;
   transform-origin: center;
 }
 
-.iconOpen {
+.iconRotated {
   transform: rotate(180deg);
 }
 
 .content {
-  padding: 0 20px;
+  font-size: 18px;
   max-height: 0;
   overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  transition: max-height 0.3s ease;
 }
 
-.expanded {
+.expandedContent {
+  max-height: clamp(150px, 352.8169px + -14.0845vw, 300px);
+}
+
+.contentInner {
   padding: 15px 20px;
-  max-height: 500px;
-  opacity: 1;
-  visibility: visible;
 }
