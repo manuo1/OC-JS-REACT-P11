@@ -16,6 +16,7 @@ function CardGrid() {
     <div className={styles.grid}>
       {logements.map((logement) => (
         <Card
+          key={logement.id} 
           id={logement.id}
           title={logement.title}
           cover={logement.cover}
