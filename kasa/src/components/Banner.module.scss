@@ -16,6 +16,8 @@ $banner-break-point: 460px;
   width: clamp(335px, 86.11vw, 1240px);
   margin: 0 auto;
 
+  box-shadow: 0px 4px 4px 0px #00000040;
+
   @media (max-width: $banner-break-point) {
     justify-content: flex-start;
   }
