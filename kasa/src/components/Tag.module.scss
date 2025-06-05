@@ -1,0 +1,16 @@
+@use "../styles/variables" as vars;
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: clamp(5px, 3.2394px + 0.4695vw, 10px);
+  font-size: clamp(10px, 8.5915px + 0.3756vw, 14px);
+  font-weight: 500;
+  padding: 0 clamp(10px, 6.4789px + 0.939vw, 20px);
+  min-width: clamp(84px, 73.0845px + 2.9108vw, 115px);
+  height: clamp(18px, 15.5352px + 0.6573vw, 25px);
+
+  background-color: vars.$color-primary;
+  color: vars.$color-white;
+}
