@@ -3,10 +3,13 @@
 .collapse {
   overflow: hidden;
   border-radius: 5px;
-  background-color: vars.$color-grey-light;
-  width: clamp(335px, 92.7465px + 64.6009vw, 1023px);
-  margin: 0 auto;
+  background-color: vars.$color-white;
+  width: 100%;
   margin-bottom: 20px;
+}
+
+.expandedCollapse {
+  background-color: vars.$color-grey-light;
 }
 
 .header {
@@ -29,8 +32,8 @@
 }
 
 .icon {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   transition: transform 0.3s ease;
   transform-origin: center;
 }
@@ -40,16 +43,24 @@
 }
 
 .content {
-  font-size: 18px;
+  font-size: clamp(12px, 9.8873px + 0.5634vw, 18px);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
 .expandedContent {
-  max-height: clamp(150px, 352.8169px + -14.0845vw, 300px);
+  max-height: 500px;
 }
 
 .contentInner {
   padding: 15px 20px;
+}
+
+.line {
+  line-height: 1.5;
+
+  @media (max-width: vars.$mobile-breakpoint) {
+    line-height: 1.4;
+  }
 }

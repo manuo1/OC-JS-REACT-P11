@@ -6,7 +6,9 @@ function Collapse({ title, content }) {
   const toggle = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className={styles.collapse}>
+    <div
+      className={`${styles.collapse} ${isOpen ? styles.expandedCollapse : ""}`}
+    >
       <div className={styles.header} onClick={toggle}>
         <h2 className={styles.title}>{title}</h2>
         <svg
@@ -24,9 +26,19 @@ function Collapse({ title, content }) {
           <path d="m6 9 6 6 6-6" />
         </svg>
       </div>
-      <div className={`${styles.content} ${isOpen ? styles.expandedContent : ""}`}>
+      <div
+        className={`${styles.content} ${isOpen ? styles.expandedContent : ""}`}
+      >
         <div className={styles.contentInner}>
-          {content}
+          {Array.isArray(content) ? (
+            content.map((item, index) => (
+              <p key={index} className={styles.line}>
+                {item}
+              </p>
+            ))
+          ) : (
+            <p>{content}</p>
+          )}
         </div>
       </div>
     </div>
