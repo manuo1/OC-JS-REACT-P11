@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <script type="module">
+      import { injectIntoGlobalHook } from "/@react-refresh";
+      injectIntoGlobalHook(window);
+      window.$RefreshReg$ = () => {};
+      window.$RefreshSig$ = () => (type) => type;
+    </script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kasa</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Header.module.scss"
+    >
+      ._header_6e2br_1 {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: clamp(335px, 86.11vw, 1240px);
+        margin: 0 auto;
+        margin-top: clamp(20px, 3.125vw, 45px);
+      }
+
+      ._logo_6e2br_11 {
+        height: clamp(46.88px, 4.72vw, 68px);
+        width: auto;
+      }
+
+      ._nav_6e2br_16 {
+        display: flex;
+        gap: clamp(26px, 12.2676px + 3.662vw, 65px);
+      }
+      ._nav_6e2br_16 a {
+        text-decoration: none;
+        color: #000000;
+        font-size: clamp(15px, 11.831px + 0.8451vw, 24px);
+        font-weight: 500;
+      }
+      ._nav_6e2br_16 a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Footer.module.scss"
+    >
+      ._footer_1b4k1_1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 65px 0 30px;
+        gap: clamp(14px, 3.0845px + 2.9108vw, 45px);
+        padding-bottom: 30px;
+        background-color: #000000;
+        color: #ffffff;
+      }
+      @media (max-width: 768px) {
+        ._footer_1b4k1_1 {
+          padding-bottom: 60px;
+        }
+      }
+
+      ._logo_1b4k1_18 {
+        width: 122px;
+      }
+
+      ._text_1b4k1_22 {
+        font-size: clamp(12px, 1.67vw, 24px);
+      }
+      @media (max-width: 768px) {
+        ._text_1b4k1_22 {
+          max-width: 122px;
+        }
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Layout.module.scss"
+    >
+      ._layout_wtju9_1 {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/pages/Home.module.scss"
+    >
+      ._container_grxop_1 {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(2px, -12.0845px + 3.7559vw, 42px);
+        margin-top: clamp(23px, 15.2535px + 2.0657vw, 45px);
+        margin-bottom: 50px;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Banner.module.scss"
+    >
+      ._banner_1pwqj_1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: clamp(10px, 2vw, 25px);
+        overflow: hidden;
+        height: clamp(111px, 15.49vw, 223px);
+        width: clamp(335px, 86.11vw, 1240px);
+        margin: 0 auto;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+      }
+      @media (max-width: 460px) {
+        ._banner_1pwqj_1 {
+          justify-content: flex-start;
+        }
+      }
+
+      ._image_1pwqj_19 {
+        position: absolute;
+        width: clamp(335px, 86.11vw, 1240px);
+        height: clamp(111px, 15.49vw, 223px);
+        object-fit: cover;
+      }
+
+      ._overlay_1pwqj_26 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.6;
+        z-index: 1;
+      }
+
+      ._text_1pwqj_35 {
+        display: flex;
+        flex-direction: row;
+        color: #ffffff;
+        font-size: clamp(24px, 3.33vw, 48px);
+        text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+          1px 1px 0 #000000, 0px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: 2;
+      }
+      @media (max-width: 460px) {
+        ._text_1pwqj_35 {
+          padding-left: 15px;
+          flex-direction: column;
+        }
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Card.module.scss"
+    >
+      ._card_1icvz_1 {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+        color: #ffffff;
+        background: #f6f6f6;
+        width: 100%;
+        height: clamp(255px, 225.0704px + 7.9812vw, 340px);
+      }
+      ._card_1icvz_1:hover {
+        transform: scale(1.02);
+      }
+      ._card_1icvz_1:hover ._image_1icvz_15 {
+        transform: scale(1.05);
+      }
+      ._card_1icvz_1:hover ._overlay_1icvz_18 {
+        opacity: 1;
+      }
+
+      ._image_1icvz_15 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      ._gradient_1icvz_30 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(10, 10, 10, 0) 42%,
+          rgba(4, 4, 4, 0.205) 99.99%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+        z-index: 1;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+      }
+
+      ._overlay_1icvz_18 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 16px;
+        z-index: 2;
+        opacity: 1;
+        transition: opacity 0.4s ease;
+      }
+
+      ._title_1icvz_53 {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/CardGrid.module.scss"
+    >
+      ._grid_ohqym_1 {
+        display: grid;
+        justify-content: center;
+        width: clamp(335px, 86.11vw, 1240px);
+        margin: 0 auto;
+        gap: clamp(20px, 9.4366px + 2.8169vw, 50px);
+        padding: clamp(20px, 6.9718px + 3.4742vw, 57px);
+        background-color: #f6f6f6;
+        border-radius: 25px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 1375px) {
+        ._grid_ohqym_1 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 900px) {
+        ._grid_ohqym_1 {
+          grid-template-columns: 1fr;
+          background-color: #ffffff;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/pages/About.module.scss"
+    >
+      ._container_qmtws_1 {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(19px, 12.3099px + 1.784vw, 38px);
+        margin-top: clamp(15px, 10.4225px + 1.2207vw, 28px);
+        margin-bottom: clamp(0px, -6.338px + 1.6901vw, 18px);
+      }
+
+      ._collapses_qmtws_9 {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(0px, -3.5211px + 0.939vw, 10px);
+        width: clamp(335px, 92.7465px + 64.6009vw, 1023px);
+        margin: 0 auto;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Collapse.module.scss"
+    >
+      ._collapse_1546k_1 {
+        overflow: hidden;
+        border-radius: 5px;
+        background-color: #ffffff;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      ._expandedCollapse_1546k_9 {
+        background-color: #f6f6f6;
+      }
+
+      ._header_1546k_13 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        padding: 0 15px;
+        font-weight: bold;
+        font-size: clamp(8px, 5.1831px + 0.7512vw, 16px);
+        background-color: #ff6060;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        height: clamp(30px, 22.2535px + 2.0657vw, 52px);
+        width: 100%;
+      }
+
+      ._icon_1546k_29 {
+        width: 32px;
+        height: 32px;
+        transition: transform 0.3s ease;
+        transform-origin: center;
+      }
+
+      ._iconRotated_1546k_36 {
+        transform: rotate(180deg);
+      }
+
+      ._content_1546k_40 {
+        font-size: clamp(12px, 9.8873px + 0.5634vw, 18px);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      ._expandedContent_1546k_47 {
+        max-height: 500px;
+      }
+
+      ._contentInner_1546k_51 {
+        padding: 15px 20px;
+      }
+
+      ._line_1546k_55 {
+        line-height: 1.5;
+      }
+      @media (max-width: 768px) {
+        ._line_1546k_55 {
+          line-height: 1.4;
+        }
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/pages/Accommodation.module.scss"
+    >
+      ._container_e6fsh_1 {
+        width: clamp(335px, 86.11vw, 1240px);
+        margin: 0 auto;
+        margin-top: clamp(20px, 11.1972px + 2.3474vw, 45px);
+        margin-bottom: 30px;
+      }
+
+      ._slideshowContainer_e6fsh_8 {
+        width: 100%;
+        height: clamp(255px, 198.662px + 15.0235vw, 415px);
+      }
+
+      ._details_e6fsh_13 {
+        margin-top: clamp(6px, -0.6901px + 1.784vw, 25px);
+      }
+
+      ._summaryAndOwnerAndRating_e6fsh_17 {
+        display: flex;
+        justify-content: space-between;
+      }
+      @media (max-width: 768px) {
+        ._summaryAndOwnerAndRating_e6fsh_17 {
+          flex-direction: column;
+        }
+      }
+
+      ._title_e6fsh_27 {
+        padding-top: 8px;
+        color: #ff6060;
+        font-weight: 500;
+        font-size: clamp(18px, 11.662px + 1.6901vw, 36px);
+      }
+
+      ._location_e6fsh_34 {
+        padding-top: clamp(8px, 17.4648px - 0.6573vw, 15px);
+        color: #000000;
+        font-weight: 500;
+        font-size: clamp(14px, 12.5915px + 0.3756vw, 18px);
+      }
+
+      ._tags_e6fsh_41 {
+        padding-top: clamp(10px, 6.4789px + 0.939vw, 20px);
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      ._collapses_e6fsh_49 {
+        padding-top: 24px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+      }
+      @media (max-width: 768px) {
+        ._collapses_e6fsh_49 {
+          padding-top: 13px;
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+      }
+
+      ._ownerAndRating_e6fsh_63 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      @media (max-width: 768px) {
+        ._ownerAndRating_e6fsh_63 {
+          padding-top: 15px;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+      }
+
+      ._ratingContainer_e6fsh_78 {
+        width: clamp(98px, 63.493px + 9.2019vw, 196px);
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Slideshow.module.scss"
+    >
+      ._slideshow_1bwru_1 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+      ._slideshow_1bwru_1 ._image_1bwru_8 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      ._slideshow_1bwru_1 ._prev_1bwru_13,
+      ._slideshow_1bwru_1 ._next_1bwru_14 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0;
+        margin: 0;
+        background: none;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+        width: clamp(12px, -0.3239px + 3.2864vw, 47px);
+        height: clamp(20px, -0.7746px + 5.5399vw, 79px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      ._slideshow_1bwru_1 ._prev_1bwru_13 svg,
+      ._slideshow_1bwru_1 ._next_1bwru_14 svg {
+        width: 100%;
+        height: 100%;
+      }
+      ._slideshow_1bwru_1 ._prev_1bwru_13:hover svg,
+      ._slideshow_1bwru_1 ._next_1bwru_14:hover svg {
+        transform: scale(1.15);
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      ._slideshow_1bwru_1 ._prev_1bwru_13 {
+        left: 23px;
+      }
+      ._slideshow_1bwru_1 ._next_1bwru_14 {
+        right: 23px;
+      }
+      ._slideshow_1bwru_1 ._counter_1bwru_47 {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ffffff;
+        font-size: 18px;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Tag.module.scss"
+    >
+      ._tag_tbg5k_1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: clamp(5px, 3.2394px + 0.4695vw, 10px);
+        font-size: clamp(10px, 8.5915px + 0.3756vw, 14px);
+        font-weight: 500;
+        padding: 0 clamp(10px, 6.4789px + 0.939vw, 20px);
+        min-width: clamp(84px, 73.0845px + 2.9108vw, 115px);
+        height: clamp(18px, 15.5352px + 0.6573vw, 25px);
+        background-color: #ff6060;
+        color: #ffffff;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Owner.module.scss"
+    >
+      ._owner_imll4_1 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15px;
+      }
+      ._owner_imll4_1 ._name_imll4_7 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        font-size: clamp(12px, 9.8873px + 0.5634vw, 18px);
+        font-weight: 500;
+        gap: 3px;
+        color: #ff6060;
+      }
+      ._owner_imll4_1 ._picture_imll4_17 {
+        width: clamp(32px, 20.7324px + 3.0047vw, 64px);
+        height: clamp(32px, 20.7324px + 3.0047vw, 64px);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/components/Rating.module.scss"
+    >
+      ._rating_13cri_1 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      ._star_13cri_7 {
+        height: 100%;
+        fill: #e3e3e3;
+      }
+
+      ._active_13cri_12 {
+        fill: #ff6060;
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/pages/Error404.module.scss"
+    >
+      ._notFound_1vjal_1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      ._title_1vjal_11 {
+        font-size: clamp(96px, 28.3944px + 18.0282vw, 288px);
+        font-weight: 700;
+        color: #ff6060;
+        margin-top: clamp(50px, 70.2817px - 1.4085vw, 65px);
+      }
+
+      ._message_1vjal_18 {
+        font-size: clamp(18px, 11.662px + 1.6901vw, 36px);
+        font-weight: 500;
+        color: #ff6060;
+        margin-top: 100px;
+      }
+
+      ._link_1vjal_25 {
+        font-size: clamp(14px, 12.5915px + 0.3756vw, 18px);
+        color: #000000;
+        margin-top: clamp(125px, 117.9577px + 1.8779vw, 145px);
+        margin-bottom: clamp(82px, 72.1408px + 2.6291vw, 110px);
+      }
+    </style>
+    <style
+      type="text/css"
+      data-vite-dev-id="/home/oudot/dev/oc/P11/OC-JS-REACT-P11/kasa/src/styles/main.scss"
+    >
+      * {
+        font-family: "Montserrat", sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        max-width: 1440px;
+        min-width: 375px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="_layout_wtju9_1">
+        <header class="_header_6e2br_1">
+          <a href="/"
+            ><img
+              alt="Kasa logo"
+              class="_logo_6e2br_11"
+              src="/src/assets/logo.png"
+          /></a>
+          <nav class="_nav_6e2br_16">
+            <a href="/">Accueil</a><a href="/about">A Propos</a>
+          </nav>
+        </header>
+        <main>
+          <div class="_container_qmtws_1">
+            <div class="_banner_1pwqj_1">
+              <img
+                alt=""
+                class="_image_1pwqj_19"
+                src="/src/assets/about-banner.png"
+              />
+              <div class="_overlay_1pwqj_26"></div>
+            </div>
+            <div class="_collapses_qmtws_9">
+              <div class="_collapse_1546k_1">
+                <div class="_header_1546k_13">
+                  <h2>Fiabilité</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="_icon_1546k_29"
+                  >
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </div>
+                <div class="_content_1546k_40">
+                  <div class="_contentInner_1546k_51">
+                    <p>
+                      Les annonces postées sur Kasa garantissent une fiabilité
+                      totale. Les photos sont conformes aux logements, et toutes
+                      les informations sont régulièrement vérifiées par nos
+                      équipes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="_collapse_1546k_1">
+                <div class="_header_1546k_13">
+                  <h2>Respect</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="_icon_1546k_29"
+                  >
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </div>
+                <div class="_content_1546k_40">
+                  <div class="_contentInner_1546k_51">
+                    <p>
+                      La bienveillance fait partie des valeurs fondatrices de
+                      Kasa. Tout comportement discriminatoire ou de perturbation
+                      du voisinage entraînera une exclusion de notre plateforme.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="_collapse_1546k_1">
+                <div class="_header_1546k_13">
+                  <h2>Service</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="_icon_1546k_29"
+                  >
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </div>
+                <div class="_content_1546k_40">
+                  <div class="_contentInner_1546k_51">
+                    <p>
+                      La qualité du service est au cœur de notre engagement chez
+                      Kasa. Nous veillons à ce que chaque interaction, que ce
+                      soit avec nos hôtes ou nos locataires, soit empreinte de
+                      respect et de bienveillance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="_collapse_1546k_1">
+                <div class="_header_1546k_13">
+                  <h2>Sécurité</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="_icon_1546k_29"
+                  >
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </div>
+                <div class="_content_1546k_40">
+                  <div class="_contentInner_1546k_51">
+                    <p>
+                      La sécurité est la priorité de Kasa. Aussi bien pour nos
+                      hôtes que pour les voyageurs, chaque logement correspond
+                      aux critères de sécurité établis par nos services. En
+                      laissant une note aussi bien à l'hôte qu'au locataire,
+                      cela permet à nos équipes de vérifier que les standards
+                      sont bien respectés. Nous organisons également des
+                      ateliers sur la sécurité domestique pour nos hôtes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="_footer_1b4k1_1">
+          <img
+            alt="Kasa"
+            class="_logo_1b4k1_18"
+            src="/src/assets/logo-white.png"
+          />
+          <p class="_text_1b4k1_22">© 2020 Kasa. All rights reserved</p>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
