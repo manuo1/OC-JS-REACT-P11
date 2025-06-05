@@ -1,11 +1,11 @@
-import React from 'react';
-import styles from './Owner.module.scss';
+import React from "react";
+import styles from "./Owner.module.scss";
 
 function Owner({ name, picture }) {
   return (
     <div className={styles.owner}>
       <div className={styles.name}>
-        {name.split(' ').map((part, i) => (
+        {name.split(" ").map((part, i) => (
           <span key={i}>{part}</span>
         ))}
       </div>

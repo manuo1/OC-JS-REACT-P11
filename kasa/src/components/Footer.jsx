@@ -1,5 +1,5 @@
-import styles from './Footer.module.scss'
-import logoWhite from '../assets/logo-white.png'
+import styles from "./Footer.module.scss";
+import logoWhite from "../assets/logo-white.png";
 
 function Footer() {
   return (
@@ -7,7 +7,7 @@ function Footer() {
       <img src={logoWhite} alt="Kasa" className={styles.logo} />
       <p className={styles.text}>© 2020 Kasa. All rights reserved</p>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

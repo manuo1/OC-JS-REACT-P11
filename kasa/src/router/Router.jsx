@@ -1,9 +1,9 @@
-import { Routes, Route } from 'react-router-dom';
-import Layout from '../components/Layout';
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Accommodation from '../pages/Accommodation';
-import Error404 from '../pages/Error404';
+import { Routes, Route } from "react-router-dom";
+import Layout from "../components/Layout";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Accommodation from "../pages/Accommodation";
+import Error404 from "../pages/Error404";
 
 function Router() {
   return (

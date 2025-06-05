@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Card.module.scss";
-import fallbackImage from '../assets/default-fallback-image.png';
+import fallbackImage from "../assets/default-fallback-image.png";
 
 function Card({ id, title, cover }) {
   return (

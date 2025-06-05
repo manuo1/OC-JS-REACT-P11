@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './Tag.module.scss';
+import React from "react";
+import styles from "./Tag.module.scss";
 
 function Tag({ children }) {
   return <span className={styles.tag}>{children}</span>;

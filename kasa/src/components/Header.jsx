@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import logo from '../assets/logo.png'
-import styles from './Header.module.scss'
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import styles from "./Header.module.scss";
 
 function Header() {
   return (
@@ -13,7 +13,7 @@ function Header() {
         <Link to="/about">A Propos</Link>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
