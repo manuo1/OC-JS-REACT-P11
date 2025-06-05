@@ -1,0 +1,26 @@
+@use "../styles/variables" as vars;
+
+.owner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: clamp(12px, 9.8873px + 0.5634vw, 18px);
+    font-weight: 500;
+    gap: 3px;
+    color: vars.$color-primary;
+  }
+
+  .picture {
+    width: clamp(32px, 20.7324px + 3.0047vw, 64px);
+    height: clamp(32px, 20.7324px + 3.0047vw, 64px);
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
