@@ -2,9 +2,8 @@
 
 .slideshow {
   position: relative;
-  width: clamp(335px, 86.11vw, 1240px);
-  height: clamp(335px, 306.831px + 7.5117vw, 415px);
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
   border-radius: 25px;
   overflow: hidden;
 

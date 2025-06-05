@@ -1,5 +1,7 @@
 @use "../styles/variables" as vars;
 
+$footer-breakpoint: 768px;
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -13,7 +15,7 @@
   background-color: vars.$color-black;
   color: vars.$color-white;
 
-  @media (max-width: 900px) {
+  @media (max-width: $footer-breakpoint) {
     padding-bottom: 60px;
   }
 }
@@ -25,7 +27,7 @@
 .text {
   font-size: clamp(12px, 1.67vw, 24px);
 
-  @media (max-width: 900px) {
+  @media (max-width: $footer-breakpoint) {
     max-width: 122px;
   }
 }
